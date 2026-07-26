@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terrence Miquel</title>
+<link rel="alternate" type="application/rss+xml" title="Terrence Miquel — Observations" href="/feed.xml">
+<meta name="description" content="An introvert who tests what he's told — business, relationships, faith — against reality, and keeps what survives.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Terrence Miquel">
+<meta property="og:url" content="https://terrencemiquel.com/">
+<meta property="og:title" content="Terrence Miquel — Before I believe it, I test it.">
+<meta property="og:description" content="An introvert who tests what he's told — business, relationships, faith — against reality, and keeps what survives.">
+<meta property="og:image" content="https://terrencemiquel.com/img/terrence.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terrence Miquel — Before I believe it, I test it.">
+<meta name="twitter:description" content="I test what I'm told against reality, and keep what survives.">
+<meta name="twitter:image" content="https://terrencemiquel.com/img/terrence.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A14;
+  --bg-lift: #12131F;
+  --bg-card: #101019;
+  --line: #232436;
+  --ink: #F1F3F9;
+  --ink-soft: #AEB2C4;
+  --ink-faint: #7E8296;
+  --cream: #9FB2F0;
+  --cream-deep: #7C93EC;
+  --brand: #3957FF;
+  --accent-bar: #3957FF;
+  --shadow: rgba(0,0,0,0.45);
+}
+[data-theme="light"] {
+  --bg: #F4F5FA;
+  --bg-lift: #E9ECF6;
+  --bg-card: #FBFCFF;
+  --line: #D8DCEA;
+  --ink: #14151F;
+  --ink-soft: #4A4E63;
+  --ink-faint: #767B90;
+  --cream: #3D53D6;
+  --cream-deep: #2E42BE;
+  --brand: #3957FF;
+  --accent-bar: #3957FF;
+  --shadow: rgba(40,60,140,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background .4s ease, color .4s ease;
+  overflow-x: hidden;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+.serif { font-family: 'Playfair Display', serif; }
+.script { font-family: 'Dancing Script', cursive; }
+
+/* ---------- NAV ---------- */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { font-family: 'Dancing Script', cursive; font-size: 1.9rem; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: .5px; }
+.nav-links { display: flex; gap: 34px; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none; font-size: .78rem;
+  letter-spacing: .16em; font-weight: 500; text-transform: uppercase;
+  padding: 6px 0; position: relative; transition: color .2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: var(--cream);
+}
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.toggle {
+  background: var(--bg-lift); border: 1px solid var(--line); color: var(--cream);
+  width: 40px; height: 40px; border-radius: 10px; cursor: pointer; font-size: 1rem;
+  display: grid; place-items: center; transition: all .2s;
+}
+.toggle:hover { border-color: var(--cream); }
+.icon-btn { background: none; border: none; color: var(--ink-soft); cursor: pointer; display: grid; place-items: center; }
+.nav-toggle { display: none; background: var(--bg-lift); border: 1px solid var(--line); color: var(--ink); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; place-items: center; }
+.nav-toggle:hover { border-color: var(--cream); }
+
+/* ---------- HERO ---------- */
+.hero { padding: 96px 0 68px; }
+.hero-grid { display: block; }
+.hero-content { max-width: 660px; }
+.eyebrow {
+  font-size: .72rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--cream-deep); font-weight: 600; margin-bottom: 26px;
+  display: flex; align-items: center; gap: 12px;
+}
+.eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--cream); display: inline-block; }
+.hero h1 { font-size: clamp(2.9rem, 6vw, 4.6rem); line-height: 1.02; font-weight: 700; letter-spacing: -0.015em; }
+.hero h1 .line2 { color: var(--cream); font-style: italic; }
+.hero-lead { color: var(--ink); font-size: 1.42rem; font-weight: 500; max-width: 24ch; line-height: 1.3; margin: 26px 0 16px; }
+.hero-lead .accent { color: var(--cream); font-weight: 600; }
+.hero-kicker { color: var(--ink-faint); font-size: .95rem; margin-bottom: 34px; }
+.hero-kicker b { color: var(--ink); font-weight: 600; }
+.cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--brand); color: #ffffff; text-decoration: none;
+  font-weight: 600; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 16px 26px; border-radius: 4px; transition: transform .2s, box-shadow .2s;
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -10px var(--brand); }
+.cta svg { transition: transform .2s; }
+.cta:hover svg { transform: translateX(4px); }
+
+.portrait {
+  aspect-ratio: 4/4.3; border-radius: 8px; overflow: hidden; position: relative;
+  background: linear-gradient(150deg, #1a1f2e, #0a0a14);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px -34px var(--brand);
+  display: grid; place-items: center;
+}
+.portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+.portrait-note { text-align: center; color: var(--ink-faint); padding: 20px; }
+.portrait-note .script { font-size: 1.5rem; color: var(--cream-deep); display: block; margin-bottom: 6px; }
+.portrait-note small { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+
+/* ---------- ATTENTION STRIP ---------- */
+.attention { padding: 60px 0; border-top: 1px solid var(--line); }
+.attention-grid { display: grid; grid-template-columns: 0.9fr repeat(4, 1fr); gap: 0; align-items: start; }
+.attn-head { padding-right: 30px; }
+.attn-head .script { font-size: 2.1rem; color: var(--cream); line-height: 1.1; display: block; }
+.attn-head .underline { width: 150px; height: 2px; background: var(--cream-deep); margin-top: 8px; opacity: .7; }
+.attn-item { padding: 4px 22px; border-left: 1px solid var(--line); }
+.attn-item:first-of-type { border-left: none; }
+.attn-item .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cream); margin-bottom: 14px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--cream) 18%, transparent); }
+.attn-item p { font-size: .9rem; color: var(--ink-soft); line-height: 1.5; }
+.attn-item p b { color: var(--ink); font-weight: 600; }
+
+/* ---------- SECTION HEADS ---------- */
+.section { padding: 78px 0; border-top: 1px solid var(--line); }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 12px; gap: 20px; }
+.sec-head h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.01em; }
+.sec-link { color: var(--cream); text-decoration: none; font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; padding-bottom: 8px; }
+.sec-link:hover { color: var(--ink); }
+.sec-sub { color: var(--ink-faint); font-size: 1rem; max-width: 54ch; margin-bottom: 40px; }
+
+/* ---------- OBSERVATIONS ---------- */
+.obs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.obs {
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 24px 20px 20px; display: flex; flex-direction: column; min-height: 224px;
+  transition: transform .2s, border-color .2s; text-decoration: none; color: inherit;
+}
+.obs:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--cream) 45%, var(--line)); }
+.obs .mark { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--cream); line-height: .6; height: 22px; }
+.obs p { font-size: .96rem; color: var(--ink); margin-top: 16px; flex: 1; line-height: 1.45; }
+.obs .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
+.obs .date { font-size: .72rem; color: var(--ink-faint); letter-spacing: .04em; }
+.obs .read { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cream); font-weight: 600; opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s; display: inline-flex; align-items: center; gap: 5px; }
+.obs:hover .read { opacity: 1; transform: translateX(0); }
+.obs.soon { cursor: default; }
+.obs.soon:hover { transform: none; border-color: var(--line); }
+.obs.soon .read { color: var(--ink-faint); }
+.obs.soon:hover .read { opacity: 1; transform: translateX(0); }
+.obs .tag { font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cream-deep); font-weight: 600; }
+
+/* ---------- FAITH BAND (signature) ---------- */
+.creed { background: var(--bg-lift); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.creed-inner { padding: 88px 28px; display: grid; grid-template-columns: auto 1fr; gap: 46px; align-items: start; }
+.creed-rail { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 8px; }
+.creed-rail .step { font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.creed-rail .arrow { color: var(--cream); font-size: 1.1rem; }
+.creed-rail .kept { color: var(--cream); }
+.creed h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 24px; }
+.creed h2 em { font-style: italic; color: var(--cream); }
+.creed p { font-size: 1.14rem; color: var(--ink-soft); max-width: 60ch; margin-bottom: 16px; }
+.creed p b { color: var(--ink); font-weight: 600; }
+
+/* ---------- BUILDING ---------- */
+.build-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.build-card {
+  border: 1px solid var(--line); border-radius: 10px; padding: 30px; position: relative; overflow: hidden;
+  background: var(--bg-card); transition: transform .2s, border-color .2s; text-decoration: none; color: inherit; display: block;
+}
+.build-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--cream) 40%, var(--line)); }
+.build-card.primary { background: linear-gradient(155deg, #17233a 0%, #121620 60%, #14120d 100%); grid-row: span 1; }
+.bc-badge { font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); font-weight: 600; margin-bottom: 18px; display: inline-block; }
+.bc-icon { width: 46px; height: 46px; border-radius: 10px; background: color-mix(in srgb, var(--cream) 14%, transparent); display: grid; place-items: center; color: var(--cream); margin-bottom: 20px; }
+.build-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+.build-card.primary h3 { font-size: 2rem; }
+.build-card p { color: var(--ink-soft); font-size: .96rem; margin-bottom: 20px; }
+.bc-more { color: var(--cream); font-size: .82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
+.build-card:hover .bc-more svg { transform: translateX(4px); }
+.bc-more svg { transition: transform .2s; }
+
+/* ---------- QUOTE BAND ---------- */
+.quote-band { padding: 70px 0; border-top: 1px solid var(--line); }
+.quote-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.quote-inner .q { font-family: 'Dancing Script', cursive; font-size: clamp(1.9rem, 4vw, 3rem); color: var(--ink); line-height: 1.2; }
+.quote-inner .q .mk { color: var(--cream); }
+.quote-inner .sig { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--cream); white-space: nowrap; }
+
+/* ---------- ABOUT ---------- */
+.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: start; }
+.about-photo {
+  aspect-ratio: 3/3.4; border-radius: 8px; border: 1px solid var(--line); overflow: hidden;
+  background: linear-gradient(150deg, #1a1f2e, #0a0a14); display: grid; place-items: center;
+  box-shadow: 0 24px 70px -40px var(--brand);
+}
+.about-photo .portrait-note .script { font-size: 1.2rem; }
+.about h2 { font-size: 2rem; font-weight: 700; margin-bottom: 6px; }
+.about .rule { width: 46px; height: 3px; background: var(--cream); margin-bottom: 24px; }
+.about p { color: var(--ink-soft); margin-bottom: 16px; font-size: 1.03rem; }
+.about p b { color: var(--ink); font-weight: 600; }
+.about .more { color: var(--cream); text-decoration: none; font-weight: 600; font-size: .95rem; border-bottom: 1px solid color-mix(in srgb, var(--cream) 40%, transparent); }
+.about-cols { display: grid; grid-template-columns: 1.15fr .85fr; gap: 44px; }
+
+.journal-list { margin-top: 12px; }
+.journal-item { display: flex; gap: 14px; padding: 16px 0; border-top: 1px solid var(--line); }
+.journal-item:first-child { border-top: none; }
+.journal-item .doc { color: var(--cream-deep); flex-shrink: 0; margin-top: 2px; }
+.journal-item h4 { font-size: 1rem; font-weight: 600; color: var(--ink); }
+.journal-item .date { font-size: .76rem; color: var(--ink-faint); }
+.journal-side h3 { font-size: 1.2rem; margin-bottom: 6px; }
+
+/* ---------- CAPTURE ---------- */
+.capture { background: var(--brand); color: #ffffff; }
+.capture-inner { padding: 46px 28px; display: flex; align-items: center; gap: 30px; justify-content: space-between; }
+.capture .env { flex-shrink: 0; }
+.capture h2 { font-size: 1.7rem; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
+.capture p { color: rgba(255,255,255,0.82); font-size: .98rem; max-width: 46ch; }
+.capture p b { color: #ffffff; }
+.capture-form { display: flex; gap: 10px; flex-shrink: 0; }
+.capture-form input {
+  border: 1px solid rgba(255,255,255,0.5); background: #fff; border-radius: 6px; padding: 15px 18px;
+  font-size: .95rem; font-family: inherit; min-width: 240px; color: #14151f;
+}
+.capture-form input::placeholder { color: #8a8fb0; }
+.capture-form button {
+  background: #0A0A14; color: #ffffff; border: none; border-radius: 6px;
+  padding: 15px 26px; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
+  transition: background .2s;
+}
+.capture-form button:hover { background: #000; }
+
+footer { background: var(--bg); padding: 34px 0; text-align: center; }
+footer p { color: var(--ink-faint); font-size: .82rem; }
+footer .script { font-size: 1.3rem; color: var(--cream-deep); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .nav-toggle { display: grid; }
+  .search-btn { display: none; }
+  .nav-links {
+    display: none;
+    position: absolute; top: 72px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+    padding: 4px 28px 18px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: .82rem; }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a.active::after { display: none; }
+  .about-cols { grid-template-columns: 1fr; gap: 30px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .portrait { max-height: 380px; }
+  .attention-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .attn-head { grid-column: 1 / -1; }
+  .attn-item { border-left: none; padding: 0; }
+  .obs-grid { grid-template-columns: 1fr 1fr; }
+  .creed-inner { grid-template-columns: 1fr; gap: 26px; padding: 54px 28px; }
+  .creed-rail { flex-direction: row; }
+  .build-grid { grid-template-columns: 1fr; }
+  .quote-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { max-width: 260px; }
+  .capture-inner { flex-direction: column; align-items: flex-start; padding: 40px 28px; }
+  .capture-form { flex-direction: column; width: 100%; }
+  .capture-form input { min-width: 0; width: 100%; }
+}
+@media (max-width: 560px) {
+  .obs-grid { grid-template-columns: 1fr; }
+  .attention-grid { grid-template-columns: 1fr; }
+  .obs { min-height: 0; }
+  .logo { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
+:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; border-radius: 3px; }
+#observations, #testing, #building, #connect { scroll-margin-top: 88px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">Terrence Miquel</a>
+    <div class="nav-links">
+      <a href="#observations">Recent Observations</a>
+      <a href="#testing">What I'm testing</a>
+      <a href="#building">What I'm building</a>
+      <a href="#connect">Join the conversation</a>
+    </div>
+    <div class="nav-right">
+      <button class="icon-btn search-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">☀</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <h1 class="serif">Before I believe it,<br><span class="line2">I test it.</span></h1>
+      <p class="hero-lead">This is how I <span class="accent">live, love, and build.</span></p>
+      <p class="hero-kicker">Business, relationships, faith — I run all of it against how the world actually works, and I keep what survives. <b>Not religion. Not theory. What holds up.</b></p>
+      <a href="#observations" class="cta">See what's survived
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- OBSERVATIONS -->
+<section class="section" id="observations">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="serif">Recent Observations</h2>
+      <a href="#" class="sec-link">View all →</a>
+    </div>
+    <p class="sec-sub">Ideas I've run against reality. These are the ones that held.</p>
+    <div class="obs-grid">
+      <a href="observation-01.html" class="obs">
+        <div class="mark">"</div>
+        <p>People don't buy products. They solve problems — then get curious about the person who solved it.</p>
+        <div class="foot">
+          <span class="date">May 24, 2025</span>
+          <span class="read">Read the test
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </a>
+      <div class="obs soon">
+        <div class="mark">"</div>
+        <p>The internet rewards attention. Reality rewards trust.</p>
+        <div class="foot">
+          <span class="date">May 21, 2025</span>
+          <span class="read">Coming soon</span>
+        </div>
+      </div>
+      <div class="obs soon">
+        <div class="mark">"</div>
+        <p>Followers are rented. Relationships are owned.</p>
+        <div class="foot">
+          <span class="date">May 18, 2025</span>
+          <span class="read">Coming soon</span>
+        </div>
+      </div>
+      <div class="obs soon">
+        <div class="mark">"</div>
+        <p>Clarity beats cleverness. Every time.</p>
+        <div class="foot">
+          <span class="date">May 15, 2025</span>
+          <span class="read">Coming soon</span>
+        </div>
+      </div>
+      <div class="obs soon">
+        <div class="mark">"</div>
+        <p>Systems create freedom. Motivation is unreliable.</p>
+        <div class="foot">
+          <span class="date">May 12, 2025</span>
+          <span class="read">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I'M TESTING -->
+<section class="attention" id="testing">
+  <div class="wrap attention-grid">
+    <div class="attn-head">
+      <span class="script">What I'm<br>testing now</span>
+      <div class="underline"></div>
+    </div>
+    <div class="attn-item"><div class="dot"></div><p>Whether you can build <b>ProEmailAddress from zero</b> — in public.</p></div>
+    <div class="attn-item"><div class="dot"></div><p>What <b>digital ownership</b> actually costs the people who skip it.</p></div>
+    <div class="attn-item"><div class="dot"></div><p>Why <b>conversations</b> build trust faster than content does.</p></div>
+    <div class="attn-item"><div class="dot"></div><p>What it really takes to <b>leave Kroger</b> — on principle, not on hope.</p></div>
+  </div>
+</section>
+
+<!-- FAITH CREED (signature band) -->
+<section class="creed" id="creed">
+  <div class="wrap creed-inner">
+    <div class="creed-rail">
+      <span class="step">What I hear</span>
+      <span class="arrow">↓</span>
+      <span class="step">The test</span>
+      <span class="arrow">↓</span>
+      <span class="step kept">Locked in</span>
+    </div>
+    <div>
+      <h2 class="serif">I test faith against reality.<br><em>Not religion.</em></h2>
+      <p>It starts with relationship — a God who still speaks and leads, not a closed book I'm left to interpret alone. That gives me two things to weigh: what I read in the text, and what I sense him prompting. Neither one lands as a conclusion. Each lands as a <b>hypothesis</b> — a claim about what's true and what to do.</p>
+      <p>Then reality gets a vote — and <b>the text is my plumb line.</b> God won't contradict his own character, so I hold every prompting against what's written, watch the fruit over time, and check it with people wiser than me. If it doesn't hold, the leading wasn't him or I read it wrong. If it holds, I lock it in.</p>
+      <p>The hard part was never whether he speaks. It's <b>telling his voice from my own wanting</b> — the thing I already wanted, wearing a halo. So I hold the voice to the same test as everything else. What I genuinely can't run this way — his nature, what waits after — reason and trust carry me there. How he leads, and how the principles actually live? Reality decides.</p>
+      <p>Religion's mistake isn't using the text. It's stopping there — doctrine with no living author still speaking behind it. <b>That's the part I let go.</b> I want the author — and I test what I hear because I believe he's really speaking, and it matters to get it right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING -->
+<section class="section" id="building">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="serif">What I'm Building</h2>
+      <a href="#" class="sec-link">See all projects →</a>
+    </div>
+    <p class="sec-sub">One thing I'm all-in on. Two things I care about. All of it, the same guy testing what works.</p>
+    <div class="build-grid">
+      <a href="#" class="build-card primary">
+        <span class="bc-badge">The main build</span>
+        <div class="bc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        </div>
+        <h3>ProEmailAddress</h3>
+        <p>Helping professionals own their identity. Keep Gmail. Look established. It's the one I'm building from zero, out loud.</p>
+        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#" class="build-card">
+        <div class="bc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 3v11M13 3v7"/></svg>
+        </div>
+        <h3>Chordocity</h3>
+        <p>Helping musicians see the patterns under the music.</p>
+        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#" class="build-card">
+        <div class="bc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+        </div>
+        <h3>Freedom</h3>
+        <p>Building toward leaving Kroger — on principle, not luck.</p>
+        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="quote-band">
+  <div class="wrap quote-inner">
+    <div class="q"><span class="mk">"</span>I don't want to build an empire.<br>I want to build options.</div>
+    <div class="sig">Terrence Miquel</div>
+  </div>
+</section>
+
+<!-- ABOUT + JOURNAL -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="img/terrence.jpg" alt="Terrence Miquel" class="portrait-img">
+    </div>
+    <div class="about about-cols">
+      <div>
+        <h2 class="serif">About Me</h2>
+        <div class="rule"></div>
+        <p>Hi, I'm Terrence. I'm an introvert — I'd rather go deep on one idea than work a room.</p>
+        <p>What I go deep on is <b>principles</b>: the ones underneath business, relationships, and faith. When someone hands me a rule or a doctrine or a piece of advice, my instinct isn't to believe it or reject it. It's to <b>test it.</b> Run it against reality and see if it holds.</p>
+        <p>What survives, I build on. What doesn't, I let go. This site is where I share what's survived.</p>
+        <a href="#" class="more">More about my journey →</a>
+      </div>
+      <div class="journal-side" id="journal">
+        <h3 class="serif">Latest from the Journal</h3>
+        <div class="journal-list">
+          <div class="journal-item">
+            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+            <div><h4>Why I Built ProEmailAddress</h4><span class="date">May 24, 2025</span></div>
+          </div>
+          <div class="journal-item">
+            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+            <div><h4>Cold Outreach Lessons</h4><span class="date">May 20, 2025</span></div>
+          </div>
+          <div class="journal-item">
+            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+            <div><h4>The $100M Decision Framework</h4><span class="date">May 17, 2025</span></div>
+          </div>
+        </div>
+        <a href="#" class="more" style="display:inline-block;margin-top:16px;">Go to Journal →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTURE -->
+<section class="capture" id="connect">
+  <div class="wrap capture-inner">
+    <div style="display:flex;align-items:center;gap:24px;">
+      <span class="env">
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+      </span>
+      <div>
+        <h2 class="serif">Join the conversation.</h2>
+        <p>Every week, one observation that survived contact with reality. No algorithms. <b>Just email.</b></p>
+      </div>
+    </div>
+    <div class="capture-form">
+      <input type="email" placeholder="Enter your email" aria-label="Email address">
+      <button type="button">Join the orbit</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><span class="script">Terrence Miquel</span> — reality teaches. I pay attention.</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggle.textContent = isDark ? '☾' : '☀';
+  });
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinksEl = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navLinksEl.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinksEl.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Highlight the nav item for whichever section is in view
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+  const linkFor = {};
+  navLinks.forEach(a => {
+    const id = a.getAttribute('href').replace('#', '');
+    if (id) linkFor[id] = a;
+  });
+  const sections = Object.keys(linkFor)
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        linkFor[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(s => spy.observe(s));
+</script>
+</body>
+</html>

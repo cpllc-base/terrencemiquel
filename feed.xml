@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terrence Miquel — Observations</title>
+    <link>https://terrencemiquel.com/</link>
+    <description>Ideas I've run against reality. These are the ones that held. One observation a week.</description>
+    <language>en-us</language>
+    <atom:link href="https://terrencemiquel.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://terrencemiquel.com/img/terrence.jpg</url>
+      <title>Terrence Miquel — Observations</title>
+      <link>https://terrencemiquel.com/</link>
+    </image>
+
+    <!-- Newest item goes FIRST. Copy this whole <item>…</item> block for each new observation. -->
+    <item>
+      <title>People don't buy products. They solve problems.</title>
+      <link>https://terrencemiquel.com/observation-01.html</link>
+      <guid isPermaLink="true">https://terrencemiquel.com/observation-01.html</guid>
+      <pubDate>Sat, 24 May 2025 12:00:00 +0000</pubDate>
+      <description>I ran the "lead with the product" playbook against real inboxes. Here's what survived — and why the problem, not the product, is the hook.</description>
+      <content:encoded><![CDATA[
+        <p><strong>What I was handed.</strong> Every marketing playbook says lead with the product — features, benefits, urgency, build the funnel and the sale follows. So I built my first cold outreach for ProEmailAddress around it.</p>
+        <p><strong>The test.</strong> The first batch led with the tool — "here's something that makes your Gmail look professional." Near silence. So I changed one thing: I stopped selling the tool and started naming the problem — the quiet cost of a serious business still running on a free @gmail.com. Same offer, different door.</p>
+        <p><strong>What survived.</strong> The replies came because someone felt seen — and the people who replied asked about <em>me</em> first, not the software. The problem was the hook. I was the reason they stayed.</p>
+        <p><strong>The principle that held:</strong> You don't earn attention by describing what you sell. You earn it by naming a problem so precisely the person feels understood — then they get curious about who understood it.</p>
+        <p><a href="https://terrencemiquel.com/observation-01.html">Read the full observation →</a></p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
