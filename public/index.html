@@ -232,6 +232,9 @@ nav {
 .about-photo .portrait-note .script { font-size: 1.2rem; }
 .about h2 { font-size: 2rem; font-weight: 700; margin-bottom: 6px; }
 .about .rule { width: 46px; height: 3px; background: var(--cream); margin-bottom: 24px; }
+.about .rule-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.about .rule-row .rule { margin-bottom: 0; }
+.about .rule-tag { color: var(--cream); font-style: italic; font-size: .95rem; }
 .about p { color: var(--ink-soft); margin-bottom: 16px; font-size: 1.03rem; }
 .about p b { color: var(--ink); font-weight: 600; }
 .about .more { color: var(--cream); text-decoration: none; font-weight: 600; font-size: .95rem; border-bottom: 1px solid color-mix(in srgb, var(--cream) 40%, transparent); }
@@ -496,11 +499,13 @@ footer .social a:hover { color: var(--cream-deep); }
     <div class="about about-cols">
       <div>
         <h2 class="serif">About Me</h2>
-        <div class="rule"></div>
+        <div class="rule-row">
+          <div class="rule"></div>
+          <span class="rule-tag">Reality teaches. I pay attention.</span>
+        </div>
         <p>Hi, I'm Terrence. I'm an introvert — I'd rather go deep on one idea than work a room.</p>
         <p>What I go deep on is <b>principles</b>: the ones underneath business, relationships, and <a href="faith.html" class="faith-link">faith</a>. When someone hands me a rule or a doctrine or a piece of advice, my instinct isn't to believe it or reject it. It's to <b>test it.</b> Run it against reality and see if it holds.</p>
         <p>What survives, I build on. What doesn't, I let go. This site is where I share what's survived.</p>
-        <p style="margin-top:18px; color:var(--cream); font-style:italic;">Reality teaches. I pay attention.</p>
       </div>
       <div class="journal-side" id="journal">
         <h3 class="serif">Latest from the Journal</h3>
