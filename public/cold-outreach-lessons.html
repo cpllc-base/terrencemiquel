@@ -312,6 +312,17 @@ footer .social a:hover { color: var(--cream-deep); }
   .article h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 26px; }
   .article p { font-size: 1.16rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 22px; }
   .article p b { color: var(--ink); font-weight: 600; }
+
+  .foot-nav { max-width: 720px; margin: 0 auto; padding: 6px 28px 90px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .foot-nav a { text-decoration: none; color: var(--ink-soft); transition: color .2s; }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav .lbl { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 5px; }
+  .foot-nav .ttl { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .foot-nav .next { text-align: right; }
+  @media (max-width: 640px) {
+    .foot-nav { flex-direction: column; align-items: stretch; gap: 24px; }
+    .foot-nav .next { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -334,6 +345,17 @@ footer .social a:hover { color: var(--cream-deep); }
   <p>The harder lesson was about the messages that still went nowhere. I used to read silence as rejection. It isn't — it's <b>data</b>, and it doesn't tell you what you assume. Wrong problem, wrong list, wrong channel, wrong week: silence doesn't say which. You only find out by isolating one variable at a time, the same way any real test works.</p>
   <p>What I stopped doing was padding the numbers with a story either way — no excuses for a bad week, no victory lap for a good one. The reply rate is reality's vote on the specific message I sent that week. Nothing more. So I keep testing the message, not my feelings about it.</p>
 </main>
+
+<nav class="foot-nav wrap" aria-label="Between journal entries">
+  <a href="why-i-built-proemailaddress.html">
+    <span class="lbl">&larr; Previous entry</span>
+    <span class="ttl">Why I Built ProEmailAddress</span>
+  </a>
+  <a href="the-100m-decision-framework.html" class="next">
+    <span class="lbl">Next entry &rarr;</span>
+    <span class="ttl">The $100M Decision Framework</span>
+  </a>
+</nav>
 
 <script>
   const toggle = document.getElementById('themeToggle');

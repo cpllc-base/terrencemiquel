@@ -312,6 +312,17 @@ footer .social a:hover { color: var(--cream-deep); }
   .article h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 26px; }
   .article p { font-size: 1.16rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 22px; }
   .article p b { color: var(--ink); font-weight: 600; }
+
+  .foot-nav { max-width: 720px; margin: 0 auto; padding: 6px 28px 90px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .foot-nav a { text-decoration: none; color: var(--ink-soft); transition: color .2s; }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav .lbl { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 5px; }
+  .foot-nav .ttl { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .foot-nav .next { text-align: right; }
+  @media (max-width: 640px) {
+    .foot-nav { flex-direction: column; align-items: stretch; gap: 24px; }
+    .foot-nav .next { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -334,6 +345,17 @@ footer .social a:hover { color: var(--cream-deep); }
   <p>What kept people stuck wasn't disagreement. It was the workaround being worse than the problem — migrating off Gmail entirely, learning a new interface, hiring someone to touch DNS. The real blocker was never the credibility gap itself. It was the cost of fixing it.</p>
   <p>ProEmailAddress exists to remove that cost. Keep the Gmail inbox you already know how to use. I walk you through the DNS, the mailbox, the aliases — step by step, no IT hire required — so mail arrives and sends as <b>you@yourdomain.com</b>. I built it because I watched a real invoice get trusted differently once it came from a real domain. That's the test I keep coming back to: not what I believe should matter, but what reality shows actually does.</p>
 </main>
+
+<nav class="foot-nav wrap" aria-label="Between journal entries">
+  <a href="journal.html">
+    <span class="lbl">&larr; Back to</span>
+    <span class="ttl">All journal entries</span>
+  </a>
+  <a href="cold-outreach-lessons.html" class="next">
+    <span class="lbl">Next entry &rarr;</span>
+    <span class="ttl">Cold Outreach Lessons</span>
+  </a>
+</nav>
 
 <script>
   const toggle = document.getElementById('themeToggle');

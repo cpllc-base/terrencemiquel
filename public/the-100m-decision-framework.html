@@ -312,6 +312,17 @@ footer .social a:hover { color: var(--cream-deep); }
   .article h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 26px; }
   .article p { font-size: 1.16rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 22px; }
   .article p b { color: var(--ink); font-weight: 600; }
+
+  .foot-nav { max-width: 720px; margin: 0 auto; padding: 6px 28px 90px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .foot-nav a { text-decoration: none; color: var(--ink-soft); transition: color .2s; }
+  .foot-nav a:hover { color: var(--ink); }
+  .foot-nav .lbl { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 5px; }
+  .foot-nav .ttl { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .foot-nav .next { text-align: right; }
+  @media (max-width: 640px) {
+    .foot-nav { flex-direction: column; align-items: stretch; gap: 24px; }
+    .foot-nav .next { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -329,11 +340,22 @@ footer .social a:hover { color: var(--cream-deep); }
 <main class="article">
   <div class="meta">May 17, 2025 &middot; <span class="etag">#principles</span></div>
   <h1 class="serif">The $100M Decision Framework</h1>
-  <p>Before I commit to a decision that feels significant, I run one prompt: <b>if this were a \$100M decision, would I still make it this way?</b> Inflating the stakes strips out the short-term relief and the emotion, and leaves just the logic. If the logic doesn't survive that reframe, it wasn't the right call at any size — I was just under-pricing the downside.</p>
+  <p>Before I commit to a decision that feels significant, I run one prompt: <b>if this were a $100M decision, would I still make it this way?</b> Inflating the stakes strips out the short-term relief and the emotion, and leaves just the logic. If the logic doesn't survive that reframe, it wasn't the right call at any size — I was just under-pricing the downside.</p>
   <p>The variable that actually matters isn't how big the decision is. It's <b>how reversible it is</b>. A small bet I can walk back beats a big one I can't, even when the irreversible option feels more decisive. Most expensive mistakes I've watched — and made — weren't wrong because they were bold. They were wrong because there was no way back once reality disagreed.</p>
   <p>This framework mostly catches one thing: decisions made to relieve discomfort right now, dressed up as strategy. Asking "would I still choose this if I couldn't undo it, and everyone could see the reasoning" filters those out fast — the ones built on real logic hold up; the ones built on avoidance don't.</p>
-  <p>It isn't a rule I follow. It's a test I run, the same as everything else on this site. The decisions that survive the \$100M framing are the ones I keep building on.</p>
+  <p>It isn't a rule I follow. It's a test I run, the same as everything else on this site. The decisions that survive the $100M framing are the ones I keep building on.</p>
 </main>
+
+<nav class="foot-nav wrap" aria-label="Between journal entries">
+  <a href="cold-outreach-lessons.html">
+    <span class="lbl">&larr; Previous entry</span>
+    <span class="ttl">Cold Outreach Lessons</span>
+  </a>
+  <a href="journal.html" class="next">
+    <span class="lbl">Back to &rarr;</span>
+    <span class="ttl">All journal entries</span>
+  </a>
+</nav>
 
 <script>
   const toggle = document.getElementById('themeToggle');
