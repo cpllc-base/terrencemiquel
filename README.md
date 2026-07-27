@@ -42,7 +42,7 @@ The site emits an RSS feed at `https://terrencemiquel.com/feed.xml`. That's the 
 Notes:
 - Kit's native RSS auto-send may require the **Creator plan** (paid, but starts low). List hosting itself is free to 10,000 subscribers.
 - Staying strictly free? Two options that use the same feed: send each observation as a manual **Broadcast**, or bridge **RSS → Kit with Zapier/Make**.
-- Embed a Kit signup form in the "Join the conversation" block so the list actually fills — that's the rented→owned conversion point.
+- A Kit signup form is embedded in the "See what survives" block so the list actually fills — that's the rented→owned conversion point.
 
 ## Photos
 Your headshot is already wired into both slots (hero + About) at `img/terrence.jpg`. To swap it later, replace that file with a same-name JPG (square works best) — no code changes needed.
