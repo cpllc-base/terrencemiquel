@@ -253,8 +253,19 @@ nav {
 .capture-form button:hover { background: #000; }
 
 footer { background: var(--bg); padding: 34px 0; text-align: center; }
+footer .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+footer .footer-links { display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 20px; }
+footer .footer-links a { color: var(--ink-faint); font-size: .82rem; text-decoration: none; transition: color .15s; }
+footer .footer-links a:hover { color: var(--ink); }
 footer p { color: var(--ink-faint); font-size: .82rem; }
 footer .script { font-size: 1.3rem; color: var(--cream-deep); }
+footer .social { display: flex; justify-content: flex-end; gap: 20px; }
+footer .social a { color: var(--cream); display: inline-flex; transition: color .15s; }
+footer .social a:hover { color: var(--cream-deep); }
+@media (max-width: 500px) {
+  footer .footer-row { justify-content: center; }
+  footer .footer-links, footer .social { justify-content: center; }
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
@@ -330,5 +341,28 @@ footer .script { font-size: 1.3rem; color: var(--cream-deep); }
   <p>The hard part was never whether he speaks. It's <b>telling his voice from my own wanting</b> &mdash; the thing I already wanted, wearing a halo. So I hold the voice to the same test as everything else. What I genuinely can't run this way &mdash; his nature, what waits after &mdash; reason and trust carry me there. How he leads, and how the principles actually live? Reality decides.</p>
   <p>Religion's mistake isn't using the text. It's stopping there &mdash; doctrine with no living author still speaking behind it. <b>That's the part I let go.</b> I want the author &mdash; and I test what I hear because I believe he's really speaking, and it matters to get it right.</p>
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <p>&copy; <span id="footer-year">2026</span> terrencemiquel.com</p>
+  </div>
+</footer>
+
+<script>
+  const yr = document.getElementById('footer-year'); if (yr) yr.textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
