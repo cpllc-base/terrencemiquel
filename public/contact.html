@@ -327,6 +327,7 @@ footer .social a:hover { color: var(--cream-deep); }
   }
   .ct-form button:hover { background: #000; }
   .ct-form button:disabled { opacity: .7; cursor: default; }
+  .ct-form .h-captcha { align-self: flex-start; }
 </style>
 </head>
 <body>
@@ -362,6 +363,7 @@ footer .social a:hover { color: var(--cream-deep); }
         <textarea id="ct-message" name="message" placeholder="What's on your mind?" required></textarea>
       </div>
       <input type="hidden" name="subject" value="New message from terrencemiquel.com contact form">
+      <div class="h-captcha" data-captcha="true"></div>
       <button type="submit">Send message</button>
     </form>
   </div>
@@ -393,6 +395,12 @@ footer .social a:hover { color: var(--cream-deep); }
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const captchaResponse = form.querySelector('[name="h-captcha-response"]');
+    if (!captchaResponse || !captchaResponse.value) {
+      alert("Please complete the captcha before sending.");
+      return;
+    }
+
     const formData = new FormData(form);
     formData.append("access_key", "5492e479-de87-41a3-9084-13be32f94140");
 
@@ -423,5 +431,6 @@ footer .social a:hover { color: var(--cream-deep); }
     }
   });
 </script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
