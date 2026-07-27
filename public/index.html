@@ -147,6 +147,8 @@ nav {
 .attention-grid { display: grid; grid-template-columns: 0.9fr repeat(4, 1fr); gap: 0; align-items: start; }
 .attn-head { padding-right: 30px; }
 .attn-head .script { font-size: 2.1rem; color: var(--cream); line-height: 1.1; display: block; }
+/* Match the other section headings (Recent Observations / What I'm Building). */
+.attn-head h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; margin: 0; }
 .attn-head .underline { width: 150px; height: 2px; background: var(--cream-deep); margin-top: 8px; opacity: .7; }
 .attn-item { padding: 4px 22px; border-left: 1px solid var(--line); }
 .attn-item:first-of-type { border-left: none; }
@@ -407,7 +409,7 @@ footer .script { font-size: 1.3rem; color: var(--cream-deep); }
 <section class="attention" id="testing">
   <div class="wrap attention-grid">
     <div class="attn-head">
-      <span class="script">What I'm<br>testing now</span>
+      <h2 class="serif">What I'm Testing</h2>
       <div class="underline"></div>
     </div>
     <div class="attn-item"><div class="dot"></div><p>Whether you can build <b>ProEmailAddress from zero</b> — in public.</p></div>
