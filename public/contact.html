@@ -328,6 +328,9 @@ footer .social a:hover { color: var(--cream-deep); }
   .ct-form button:hover { background: #000; }
   .ct-form button:disabled { opacity: .7; cursor: default; }
   .ct-form .h-captcha { align-self: flex-start; }
+  .ct-msg { font-weight: 600; }
+  .ct-msg.success { color: #ffffff; }
+  .ct-msg.error { color: #ffd6d6; }
 </style>
 </head>
 <body>
@@ -365,6 +368,7 @@ footer .social a:hover { color: var(--cream-deep); }
       <input type="hidden" name="subject" value="New message from terrencemiquel.com contact form">
       <div class="h-captcha" data-captcha="true"></div>
       <button type="submit">Send message</button>
+      <div class="ct-msg" hidden></div>
     </form>
   </div>
 </section>
@@ -391,13 +395,21 @@ footer .social a:hover { color: var(--cream-deep); }
 
   const form = document.getElementById('contact-form');
   const submitBtn = form.querySelector('button[type="submit"]');
+  const msg = form.querySelector('.ct-msg');
+
+  function showMessage(text, isError) {
+    msg.textContent = text;
+    msg.className = 'ct-msg ' + (isError ? 'error' : 'success');
+    msg.hidden = false;
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    msg.hidden = true;
 
     const captchaResponse = form.querySelector('[name="h-captcha-response"]');
     if (!captchaResponse || !captchaResponse.value) {
-      alert("Please complete the captcha before sending.");
+      showMessage('Please complete the captcha before sending.', true);
       return;
     }
 
@@ -418,14 +430,17 @@ footer .social a:hover { color: var(--cream-deep); }
       const data = await response.json();
 
       if (response.ok) {
-        alert("Success! Your message has been sent.");
-        form.reset();
+        Array.from(form.children).forEach(child => {
+          if (child !== msg) child.style.display = 'none';
+        });
+        showMessage("Thanks — your message has been sent.", false);
       } else {
-        alert("Error: " + data.message);
+        showMessage('Error: ' + data.message, true);
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       }
     } catch (error) {
-      alert("Something went wrong. Please try again.");
-    } finally {
+      showMessage('Something went wrong. Please try again.', true);
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     }
