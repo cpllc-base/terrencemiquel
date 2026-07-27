@@ -28,8 +28,8 @@
   --bg-card: #101019;
   --line: #232436;
   --ink: #F1F3F9;
-  --ink-soft: #AEB2C4;
-  --ink-faint: #7E8296;
+  --ink-soft: #B9BDCE;
+  --ink-faint: #8A8EA3;
   --cream: #9FB2F0;
   --cream-deep: #7C93EC;
   --brand: #3957FF;
@@ -42,8 +42,8 @@
   --bg-card: #FBFCFF;
   --line: #D8DCEA;
   --ink: #14151F;
-  --ink-soft: #4A4E63;
-  --ink-faint: #767B90;
+  --ink-soft: #40445A;
+  --ink-faint: #666B80;
   --cream: #3D53D6;
   --cream-deep: #2E42BE;
   --brand: #3957FF;
@@ -56,7 +56,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   transition: background .4s ease, color .4s ease;
   overflow-x: hidden;
@@ -152,7 +152,7 @@ nav {
 .attn-item { padding: 4px 22px; border-left: 1px solid var(--line); }
 .attn-item:first-of-type { border-left: none; }
 .attn-item .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cream); margin-bottom: 14px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--cream) 18%, transparent); }
-.attn-item p { font-size: .9rem; color: var(--ink-soft); line-height: 1.5; }
+.attn-item p { font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
 .attn-item p b { color: var(--ink); font-weight: 600; }
 
 /* ---------- SECTION HEADS ---------- */
@@ -175,15 +175,11 @@ nav {
 }
 .obs:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--cream) 45%, var(--line)); }
 .obs .mark { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--cream); line-height: .6; height: 22px; }
-.obs p { font-size: .96rem; color: var(--ink); margin-top: 16px; flex: 1; line-height: 1.45; }
+.obs p { font-size: .96rem; color: var(--ink); margin-top: 16px; flex: 1; line-height: 1.55; }
 .obs .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
 .obs .date { font-size: .72rem; color: var(--ink-faint); letter-spacing: .04em; }
 .obs .read { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cream); font-weight: 600; opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s; display: inline-flex; align-items: center; gap: 5px; }
 .obs:hover .read { opacity: 1; transform: translateX(0); }
-.obs.soon { cursor: default; }
-.obs.soon:hover { transform: none; border-color: var(--line); }
-.obs.soon .read { color: var(--ink-faint); }
-.obs.soon:hover .read { opacity: 1; transform: translateX(0); }
 .obs .tag { font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cream-deep); font-weight: 600; }
 
 /* ---------- FAITH BAND (signature) ---------- */
@@ -335,7 +331,7 @@ footer .social a:hover { color: var(--cream-deep); }
     <a href="#" class="logo">Terrence Miquel</a>
     <div class="nav-links">
       <a href="#observations">Observations</a>
-      <a href="#testing">Testing</a>
+      <a href="#testing">Current Tests</a>
       <a href="#building">Building</a>
       <a href="journal.html">Journal</a>
       <a href="#about">About</a>
@@ -385,38 +381,6 @@ footer .social a:hover { color: var(--cream-deep); }
           </span>
         </div>
       </a>
-      <div class="obs soon">
-        <div class="mark">"</div>
-        <p>The internet rewards attention. Reality rewards trust.</p>
-        <div class="foot">
-          <span class="date">May 21, 2025</span>
-          <span class="read">Coming soon</span>
-        </div>
-      </div>
-      <div class="obs soon">
-        <div class="mark">"</div>
-        <p>Followers are rented. Relationships are owned.</p>
-        <div class="foot">
-          <span class="date">May 18, 2025</span>
-          <span class="read">Coming soon</span>
-        </div>
-      </div>
-      <div class="obs soon">
-        <div class="mark">"</div>
-        <p>Clarity beats cleverness. Every time.</p>
-        <div class="foot">
-          <span class="date">May 15, 2025</span>
-          <span class="read">Coming soon</span>
-        </div>
-      </div>
-      <div class="obs soon">
-        <div class="mark">"</div>
-        <p>Systems create freedom. Motivation is unreliable.</p>
-        <div class="foot">
-          <span class="date">May 12, 2025</span>
-          <span class="read">Coming soon</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -425,7 +389,7 @@ footer .social a:hover { color: var(--cream-deep); }
 <section class="attention" id="testing">
   <div class="wrap attention-grid">
     <div class="attn-head">
-      <h2 class="serif">What I'm Testing</h2>
+      <h2 class="serif">What I'm Currently Testing</h2>
     </div>
     <div class="attn-item"><div class="dot"></div><p>Whether you can build <b>ProEmailAddress from zero</b> — in public.</p></div>
     <div class="attn-item"><div class="dot"></div><p>What <b>digital ownership</b> actually costs the people who skip it.</p></div>
@@ -449,7 +413,7 @@ footer .social a:hover { color: var(--cream-deep); }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
         </div>
         <h3>ProEmailAddress</h3>
-        <p>Helping professionals own their identity. Keep Gmail. Look established. It's the one I'm building from zero, out loud.</p>
+        <p>A test of digital ownership: whether helping professionals own their identity online — without leaving Gmail — can become a real business. Built from zero, in public.</p>
         <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a href="#" class="build-card">
@@ -457,7 +421,7 @@ footer .social a:hover { color: var(--cream-deep); }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 3v11M13 3v7"/></svg>
         </div>
         <h3>Chordocity</h3>
-        <p>Helping musicians see the patterns under the music.</p>
+        <p>A test of perception: whether musicians can hear the structure they've been playing around all along, once someone names it.</p>
         <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a href="#" class="build-card">
@@ -465,7 +429,7 @@ footer .social a:hover { color: var(--cream-deep); }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
         </div>
         <h3>Freedom</h3>
-        <p>Building toward leaving Kroger — on principle, not luck.</p>
+        <p>A test of exit: whether leaving Kroger on principle — not luck — actually holds up once I do it.</p>
         <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
@@ -487,7 +451,7 @@ footer .social a:hover { color: var(--cream-deep); }
       <span class="arrow">↓</span>
       <span class="step">The test</span>
       <span class="arrow">↓</span>
-      <span class="step kept">Locked in</span>
+      <span class="step kept">What holds</span>
     </div>
     <div>
       <h2 class="serif">I test faith against reality.<br><em>Not religion.</em></h2>

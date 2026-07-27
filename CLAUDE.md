@@ -13,7 +13,7 @@ business, relationships, faith — against reality, and keeps what survives."* T
 the point, not the person. Keep it that way.
 
 ## Files
-- `index.html` — the single-page homepage. Sections in order: hero → "What I'm testing" strip → Recent Observations → faith/creed band → What I'm building → pull quote → About + Journal → "Join the conversation" (email signup) → footer.
+- `index.html` — the single-page homepage. Sections in order: hero → "What I'm Currently Testing" strip → Recent Observations → faith/creed band → What I'm building → pull quote → About + Journal → "Join the conversation" (email signup) → footer.
 - `observation-N.html` — one detail page per observation. `observation-01.html` is the template/reference.
 - `feed.xml` — RSS 2.0 feed. **This is the email trigger** (see Publishing).
 - `img/terrence.jpg` — headshot. Currently used in the About section only (hero is text-first, no photo — intentional).
@@ -38,9 +38,10 @@ Light theme exists via `[data-theme="light"]` and a toggle button. Keep both the
 2. **`overflow-x: hidden` on `body` is load-bearing** in `observation-*.html` — the full-bleed
    `.step.kept` section relies on it. Don't remove it.
 3. **Cross-page links use `index.html`**, not `/`, so the site also works when opened as local files.
-4. Nav is intentionally **4 items** (Recent Observations / What I'm testing / What I'm building /
-   Join the conversation), with a mobile hamburger and a scroll-spy that highlights the active section.
-   Don't add more nav items without reason.
+4. Nav currently has **5 items** (Observations / Current Tests / Building / Journal / About), with a
+   mobile hamburger and a scroll-spy that highlights the active section. Don't add more nav items
+   without reason. (Note: this bullet previously said "4 items ... Join the conversation" — that was
+   stale; Journal and About were added and Join the conversation/Contact were moved out of the nav.)
 
 ## Publishing a new observation (the full loop)
 1. Duplicate `observation-01.html` → `observation-N.html`. Update: `<title>`, the meta description,
