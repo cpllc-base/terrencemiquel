@@ -81,7 +81,8 @@ nav {
 .statement { font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.12; font-weight: 600; letter-spacing: -0.01em; }
 .statement .hl { color: var(--cream); font-style: italic; }
 .byline { margin-top: 32px; display: flex; align-items: center; gap: 12px; color: var(--ink-faint); font-size: .9rem; }
-.byline .av { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(140deg,#2a2318,#14110b); border: 1px solid var(--line); }
+.byline .av { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; display: block; border: 1px solid var(--line); flex-shrink: 0; }
+.byline .av img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
 .byline b { color: var(--ink-soft); font-weight: 600; }
 
 /* ---- SPINE (handed / tested / kept) ---- */
@@ -171,7 +172,7 @@ footer .social a:hover { color: var(--cream-deep); }
       </div>
       <h1 class="statement serif">The rep doesn't happen during rehearsal. <span class="hl">It happens when reality pushes back.</span></h1>
       <div class="byline">
-        <span class="av"></span>
+        <a href="index.html#about" class="av"><img src="img/terrence.jpg" alt="Terrence Miquel"></a>
         <span>By <b>Terrence Miquel</b> · a 3-minute read</span>
       </div>
     </div>
