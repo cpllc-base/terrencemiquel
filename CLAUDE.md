@@ -35,8 +35,12 @@ Light theme exists via `[data-theme="light"]` and a toggle button. Keep both the
 1. **Filled bands need explicit side padding.** `.capture` and `.creed` are full-width colored
    bands. Their inner container must use `padding: Y 28px`, NOT `padding: Y 0` — the shorthand
    zeroes out the horizontal gutter the `.wrap` class provides, and content jams against the edge.
-2. **`overflow-x: hidden` on `body` is load-bearing** in `observation-*.html` — the full-bleed
-   `.step.kept` section relies on it. Don't remove it.
+2. `.step.kept` in `observation-*.html` used to break out of its container with
+   `margin: 0 -100vw; padding: 0 100vw` to get a full-bleed background — but it's a direct child of
+   `<article>` (no width constraint), so the breakout was never needed and was causing horizontal
+   scroll on mobile (100vw renders wider than the visual viewport on some mobile browsers). Removed;
+   `.step.kept { background: var(--bg-lift); }` alone is enough. `overflow-x: hidden` on `body`
+   remains as a general safety net, not because anything specifically depends on it now.
 3. **Cross-page links use `index.html`**, not `/`, so the site also works when opened as local files.
 4. Nav currently has **5 items** (Observations / Current Tests / Building / Journal / About), with a
    mobile hamburger and a scroll-spy that highlights the active section. Don't add more nav items
