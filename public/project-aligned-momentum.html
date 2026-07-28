@@ -3,21 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terrence Miquel</title>
-<link rel="alternate" type="application/rss+xml" title="Terrence Miquel — Observations" href="/feed.xml">
-<meta name="description" content="An introvert who tests what he's told — faith, relationships, business — against reality, and keeps what survives.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Terrence Miquel">
-<meta property="og:url" content="https://terrencemiquel.com/">
-<meta property="og:title" content="Terrence Miquel — Before I trust it, I test it.">
-<meta property="og:description" content="An introvert who tests what he's told — faith, relationships, business — against reality, and keeps what survives.">
-<meta property="og:image" content="https://terrencemiquel.com/img/terrence.jpg">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="800">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Terrence Miquel — Before I trust it, I test it.">
-<meta name="twitter:description" content="I test what I'm told against reality, and keep what survives.">
-<meta name="twitter:image" content="https://terrencemiquel.com/img/terrence.jpg">
+<title>Aligned Momentum — Terrence Miquel</title>
+<meta name="description" content="A framework for building habits that work with principles instead of against them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
@@ -315,235 +302,37 @@ footer .social a:hover { color: var(--cream-deep); }
 :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; border-radius: 3px; }
 #observations, #testing, #building, #connect { scroll-margin-top: 88px; }
 </style>
+<style>
+  .article { max-width: 720px; margin: 0 auto; padding: 70px 28px 40px; }
+  .article .badge { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); font-weight: 600; margin-bottom: 14px; display: block; }
+  .article h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 26px; }
+  .article p { font-size: 1.16rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 22px; }
+  .article p b { color: var(--ink); font-weight: 600; }
+  .article a { color: var(--cream); }
+  .article .note { background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; font-size: .95rem; color: var(--ink-faint); margin: 30px 0; }
+  .article .status { font-size: .85rem; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 26px; margin-top: 10px; }
+</style>
 </head>
 <body>
-
 <nav>
   <div class="wrap nav-inner">
-    <a href="#" class="logo">Terrence Miquel</a>
-    <div class="nav-links">
-      <a href="#observations">Observations</a>
-      <a href="#testing">Current Tests</a>
-      <a href="#building">Building</a>
-      <a href="journal.html">Journal</a>
-      <a href="#about">About</a>
-    </div>
-    <div class="nav-right">
-      <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">
-        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
+    <a href="index.html" class="logo">Terrence Miquel</a>
+    <a href="projects.html" class="sec-link">&larr; Back to Projects</a>
+    <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-content">
-      <h1 class="serif">Before I trust it, <span class="line2">I test it.</span></h1>
-      <p class="hero-lead">This is how I <span class="accent">live, love, and build.</span></p>
-      <p class="hero-kicker">Whatever's in front of me — <a href="faith.html" class="faith-link">faith</a>, relationships, health, money, business, nothing's exempt — I run it against how the world actually works, keep what survives, and build on it.<br><b>No theory. No hype. Just reality.</b></p>
-      <a href="#connect" class="cta">See what survives
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- OBSERVATIONS -->
-<section class="section" id="observations">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="serif">Recent Observations</h2>
-      <a href="#" class="sec-link">View all →</a>
-    </div>
-    <p class="sec-sub">Ideas I've run against reality. These are the ones that held.</p>
-    <div class="obs-grid">
-      <a href="observation-01.html" class="obs">
-        <div class="mark">"</div>
-        <p>People don't buy products. They solve problems — then get curious about the person who solved it.</p>
-        <div class="foot">
-          <span class="date">May 24, 2025</span>
-          <span class="read">Read the test
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT I'M TESTING -->
-<section class="attention" id="testing">
-  <div class="wrap attention-grid">
-    <div class="attn-head">
-      <h2 class="serif">What I'm Currently Testing</h2>
-    </div>
-    <div class="attn-item"><div class="dot"></div><p>Whether you can build <b>ProEmailAddress from zero</b> — in public.</p></div>
-    <div class="attn-item"><div class="dot"></div><p>What <b>digital ownership</b> actually costs the people who skip it.</p></div>
-    <div class="attn-item"><div class="dot"></div><p>Why <b>conversations</b> build trust faster than content does.</p></div>
-    <div class="attn-item"><div class="dot"></div><p>What it really takes to <b>leave Kroger</b> — on principle, not on hope.</p></div>
-  </div>
-</section>
-
-<!-- BUILDING -->
-<section class="section" id="building">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="serif">What I'm Building</h2>
-      <a href="projects.html" class="sec-link">See all projects →</a>
-    </div>
-    <div class="build-grid">
-      <a href="project-proemailaddress.html" class="build-card primary">
-        <span class="bc-badge">The main build</span>
-        <div class="bc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-        </div>
-        <h3>ProEmailAddress</h3>
-        <p>A test of digital ownership: whether helping professionals own their identity online — without leaving Gmail — can become a real business. Built from zero, in public.</p>
-        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="project-aligned-momentum.html" class="build-card">
-        <div class="bc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
-        </div>
-        <h3>Aligned Momentum</h3>
-        <p>Principles are God's automation — the consequences run whether you fight them or not. Aligned Momentum is how I build habits that run with them instead of against them.</p>
-        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="project-chordosity.html" class="build-card">
-        <div class="bc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 3v11M13 3v7"/></svg>
-        </div>
-        <h3>Chordosity</h3>
-        <p>A framework for hearing the principles and patterns underneath chords and chord progressions quickly — plus the psychology of deep integration that turns recognition into mastery.</p>
-        <span class="bc-more">Learn more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FAITH CREED (signature band) -->
-<section class="creed" id="creed">
-  <div class="wrap creed-inner">
-    <div class="creed-rail">
-      <span class="step">What I hear</span>
-      <span class="arrow">↓</span>
-      <span class="step">The test</span>
-      <span class="arrow">↓</span>
-      <span class="step kept">What holds</span>
-    </div>
-    <div>
-      <h2 class="serif">I test faith against reality.<br><em>Not religion.</em></h2>
-      <p>It starts with relationship — a God who still speaks, not a closed book. I hold what I hear against the text, watch the fruit, and keep what holds. <b>The same test I bring to everything else.</b></p>
-      <a href="faith.html" class="sec-link">Read the full thinking →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT + JOURNAL -->
-<section class="section" id="about">
-  <div class="wrap about-grid">
-    <div class="about-photo">
-      <img src="img/terrence.jpg" alt="Terrence Miquel" class="portrait-img">
-    </div>
-    <div class="about about-cols">
-      <div>
-        <h2 class="serif">About Me</h2>
-        <div class="rule-row">
-          <div class="rule"></div>
-          <span class="rule-tag">Reality teaches. I pay attention.</span>
-        </div>
-        <p>Hi, I'm Terrence. I'm an introvert — I'd rather go deep on one idea than work a room.</p>
-        <p>What I go deep on is <b>principles</b>: the ones underneath <a href="faith.html" class="faith-link">faith</a>, relationships, health, money, and business. When someone hands me a rule, a doctrine, or a piece of advice, my instinct isn't to accept it or reject it. It's to <b>test it.</b> Run it against reality and see if it holds.</p>
-        <p>What survives, I build on. What doesn't, I let go.</p>
-      </div>
-      <div class="journal-side" id="journal">
-        <h3 class="serif">Latest from the Journal</h3>
-        <div class="journal-list">
-          <a class="journal-item" href="why-i-built-proemailaddress.html">
-            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h4>Why I Built ProEmailAddress</h4><span class="date">May 24, 2025</span></div>
-          </a>
-          <a class="journal-item" href="cold-outreach-lessons.html">
-            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h4>Cold Outreach Lessons</h4><span class="date">May 20, 2025</span></div>
-          </a>
-          <a class="journal-item" href="the-100m-decision-framework.html">
-            <span class="doc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h4>The $100M Decision Framework</h4><span class="date">May 17, 2025</span></div>
-          </a>
-        </div>
-        <a href="journal.html" class="more" style="display:inline-block;margin-top:16px;">Go to Journal →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAPTURE -->
-<section class="capture" id="connect">
-  <div class="wrap capture-inner">
-    <div style="display:flex;align-items:center;gap:24px;">
-      <span class="env">
-        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-      </span>
-      <div>
-        <h2 class="serif">See what survives.</h2>
-        <p>Every week, one observation that survived contact with reality. <b>Just email.</b></p>
-      </div>
-    </div>
-    <form class="capture-form" id="capture-form"
-          action="https://app.kit.com/forms/9730866/subscriptions" method="post">
-      <input name="email_address" type="email" placeholder="Enter your email" aria-label="Email address" required>
-      <button type="submit">Let's go deep</button>
-      <div class="capture-success" hidden>Thanks — you're in!</div>
-    </form>
-  </div>
-</section>
-<script>
-  (function () {
-    const form = document.getElementById('capture-form');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const input = form.querySelector('input[name="email_address"]');
-      const button = form.querySelector('button');
-      const success = form.querySelector('.capture-success');
-      const email = input.value.trim();
-      if (!email) return;
-      button.disabled = true;
-      const originalLabel = button.textContent;
-      button.textContent = 'Sending…';
-      fetch(form.action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email_address: email })
-      })
-        .then(function (res) { return res.json(); })
-        .then(function (data) {
-          if (data && data.status === 'success' || data && data.subscription) {
-            input.style.display = 'none';
-            button.style.display = 'none';
-            success.hidden = false;
-          } else {
-            button.disabled = false;
-            button.textContent = originalLabel;
-            const msg = (data && data.errors && data.errors.messages && data.errors.messages[0]) || 'Something went wrong — please try again.';
-            alert(msg);
-          }
-        })
-        .catch(function () {
-          button.disabled = false;
-          button.textContent = originalLabel;
-          alert('Something went wrong — please try again.');
-        });
-    });
-  })();
-</script>
+<main class="article">
+  <h1 class="serif">Aligned Momentum</h1>
+  <p>Principles aren't optional. Gravity doesn't ask permission, and neither does the principle that undisciplined spending erodes freedom, or that neglected relationships thin out. The consequences run whether you agree with them or not. Call that <b>God's automation</b> — it executes on its own, all the time, no input required.</p>
+  <p>Habits are the human-side automation. They're the daily system that either runs <b>with</b> that first automation or fights it. Most people build habits reactively — in response to a crisis, a New Year, a low moment — and then wonder why the habit doesn't stick. It doesn't stick because it was never aligned with a principle already running in the background. It was competing with it.</p>
+  <p>Aligned Momentum is the practice of doing it the other way: find the principle actually governing the area of life you're trying to change, then build the smallest daily habit that moves <b>with</b> it instead of against it. When the two automations point the same direction, momentum compounds instead of costing you. When they don't, you can out-discipline the mismatch for a while — but the principle always wins eventually.</p>
+  <div class="note">Draft note: this section is the framework as I understand it right now. The concrete personal example — the specific habit and principle I tested this on first — still needs to go here. Flagging it rather than inventing one.</div>
+  <p class="status">Status: early build. More here as it takes shape.</p>
+</main>
 
 <footer>
   <div class="wrap">
@@ -567,44 +356,10 @@ footer .social a:hover { color: var(--cream-deep); }
 <script>
   const toggle = document.getElementById('themeToggle');
   const root = document.documentElement;
-  const yr = document.getElementById('footer-year'); if (yr) yr.textContent = new Date().getFullYear();
   toggle.addEventListener('click', () => {
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    // Which icon shows is driven by CSS off [data-theme] — no glyph swap here.
+    root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
-
-  // Mobile menu toggle
-  const navToggle = document.getElementById('navToggle');
-  const navLinksEl = document.querySelector('.nav-links');
-  navToggle.addEventListener('click', () => {
-    const open = navLinksEl.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinksEl.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  // Highlight the nav item for whichever section is in view
-  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
-  const linkFor = {};
-  navLinks.forEach(a => {
-    const id = a.getAttribute('href').replace('#', '');
-    if (id) linkFor[id] = a;
-  });
-  const sections = Object.keys(linkFor)
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        linkFor[e.target.id].classList.add('active');
-      }
-    });
-  }, { rootMargin: '-15% 0px -80% 0px', threshold: 0 });
-  sections.forEach(s => spy.observe(s));
+  const yr = document.getElementById('footer-year'); if (yr) yr.textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
