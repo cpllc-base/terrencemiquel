@@ -87,6 +87,8 @@ nav {
 .icon-btn { background: none; border: none; color: var(--ink-soft); cursor: pointer; display: grid; place-items: center; }
 .nav-toggle { display: none; background: var(--bg-lift); border: 1px solid var(--line); color: var(--ink); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; place-items: center; }
 .nav-toggle:hover { border-color: var(--cream); }
+.subnav { border-bottom: 1px solid var(--line); }
+.subnav .wrap { padding: 14px 28px; }
 
 /* ---------- HERO ---------- */
 .hero { padding: 96px 0 68px; background: var(--bg-lift); }
@@ -317,13 +319,29 @@ footer .social a:hover { color: var(--cream-deep); }
 <nav>
   <div class="wrap nav-inner">
     <a href="index.html" class="logo">Terrence Miquel</a>
-    <a href="projects.html" class="sec-link">&larr; Back to Projects</a>
-    <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">
-      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
+    <div class="nav-links">
+      <a href="index.html#observations">Observations</a>
+      <a href="index.html#testing">Current Tests</a>
+      <a href="index.html#building">Building</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-right">
+      <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
+<div class="subnav">
+  <div class="wrap">
+    <a href="projects.html" class="sec-link">&larr; Back to Projects</a>
+  </div>
+</div>
 
 <main class="article">
   <span class="badge">Book — in progress</span>
@@ -361,6 +379,16 @@ footer .social a:hover { color: var(--cream-deep); }
     root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
   const yr = document.getElementById('footer-year'); if (yr) yr.textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('navToggle');
+  const navLinksEl = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navLinksEl.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinksEl.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
 </script>
 </body>
 </html>
