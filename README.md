@@ -1,22 +1,28 @@
 # terrencemiquel.com — static site
 
-Two files, no build step. Deploy as-is.
+Static HTML/CSS/JS with a tiny local build step: shared nav/footer live once in `src/partials/`
+and get stitched into every page by `build.py`. The output in `public/` is what actually deploys —
+plain static files, nothing runs on the server.
 
 ## Files
-- `index.html` — the homepage
-- `observation-01.html` — first observation ("People don't buy products")
+- `src/pages/*.html` — edit these. One file per page.
+- `src/partials/nav.html`, `src/partials/footer.html` — the shared header/footer, included on
+  every page.
+- `build.py` — run this after editing anything in `src/`, before committing.
+- `public/*.html` — **generated.** Don't hand-edit; the next build overwrites it.
+- `public/feed.xml`, `public/img/` — not templated, edited directly in `public/`.
+
+## Editing a page
+1. Edit the file under `src/pages/`.
+2. `python3 build.py` — regenerates everything in `public/`.
+3. `git add . && git commit -m "..." && git push`.
 
 ## Deploy (Cloudflare Pages, free)
-1. Put these files in a Git repo (e.g. `github.com/cpllc-base/terrencemiquel`):
-   ```
-   git init
-   git add .
-   git commit -m "Initial site"
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
+1. Put this repo on GitHub (e.g. `github.com/cpllc-base/terrencemiquel`).
 2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git** → pick the repo.
-3. Build settings: **Framework preset = None**, **Build command = (blank)**, **Output directory = /** (root). Deploy.
+3. Build settings: **Framework preset = None**, **Build command = (blank)**, **Output directory = `public`**. Deploy.
+   (The build already happened locally before you pushed — Cloudflare just serves the `public/`
+   folder as-is.)
 4. **Custom domain:** Pages project → Custom domains → add `terrencemiquel.com`. If your DNS is already on Cloudflare it wires automatically; otherwise add the CNAME it shows you. HTTPS is automatic.
 
 Every `git push` redeploys. That push is your publish button.
@@ -24,13 +30,11 @@ Every `git push` redeploys. That push is your publish button.
 *(Even simpler alternative: GitHub Pages — repo Settings → Pages → deploy from `main`. Cloudflare gives better performance and leaves room to add dynamic pieces later.)*
 
 ## Add a new observation
-1. Duplicate `observation-01.html` → `observation-02.html`.
-2. Edit the headline, the meta line, the three steps (handed → tested → kept), the principle, and the "next" link.
-3. In `index.html`, find the matching **"Coming soon"** card and turn it into a link:
-   - change `<div class="obs soon"> … <span class="read">Coming soon</span>`
-   - to `<a href="observation-02.html" class="obs"> … <span class="read">Read the test →</span></a>`
-4. **Add it to the feed** (this is what emails the list). In `feed.xml`, copy the existing `<item>…</item>` block, paste it as the NEW FIRST item, and update the title, link, guid, pubDate, description, and content.
-5. `git add . && git commit -m "Add observation 2" && git push`. Live in ~1 minute.
+1. Duplicate `src/pages/observation-01.html` → `src/pages/observation-N.html`.
+2. Edit the headline, the meta line, the three steps (handed → tested → kept), the principle, and the foot-nav prev/next links.
+3. In `src/pages/index.html`, add a new card to the observations grid linking to `observation-N.html`.
+4. **Add it to the feed** (this is what emails the list). In `public/feed.xml` (not templated — edit directly), copy the existing `<item>…</item>` block, paste it as the NEW FIRST item, and update the title, link, guid, pubDate, description, and content.
+5. `python3 build.py`, then `git add . && git commit -m "Add observation N" && git push`. Live in ~1 minute.
 
 ## Email the list automatically (RSS → Kit)
 The site emits an RSS feed at `https://terrencemiquel.com/feed.xml`. That's the trigger.

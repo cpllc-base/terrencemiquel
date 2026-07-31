@@ -4,8 +4,10 @@ Project context for Claude Code. Read this before editing.
 
 ## What this is
 The personal site of **Terrence Miquel** (note the spelling — the "L"). A hand-built
-**static site**: plain HTML/CSS/vanilla JS, no framework, no build step. Deployed on
-Cloudflare Pages from this repo. Every `git push` redeploys.
+**static site**: plain HTML/CSS/vanilla JS, no framework. It does have a **tiny local build
+step** (see below) that stitches shared nav/footer partials into each page — the output is
+still plain static HTML, deployed on Cloudflare Pages from this repo. Every `git push`
+redeploys.
 
 The site's job is a **validation destination**: people arrive from Terrence's social
 content and the answer they should leave with is *"an introvert who tests what he's told —
@@ -13,11 +15,39 @@ business, relationships, faith — against reality, and keeps what survives."* T
 the point, not the person. Keep it that way.
 
 ## Files
-- `index.html` — the single-page homepage. Sections in order: hero → "What I'm Currently Testing" strip → Recent Observations → faith/creed band → What I'm building → pull quote → About + Journal → "See what survives" (email signup) → footer.
-- `observation-N.html` — one detail page per observation. `observation-01.html` is the template/reference.
-- `feed.xml` — RSS 2.0 feed. **This is the email trigger** (see Publishing).
-- `img/terrence.jpg` — headshot. Currently used in the About section only (hero is text-first, no photo — intentional).
+- **`src/pages/*.html`** — the real source for every page. Edit these, not `public/*.html` directly.
+- **`src/partials/nav.html`, `src/partials/footer.html`** — the shared header and footer, each
+  included on every page. Edit once here, run the build, and it updates everywhere.
+- **`build.py`** — the build script (see Build step below).
+- `public/*.html` — **generated output.** This is what Cloudflare Pages deploys. Never hand-edit
+  these — the next build silently overwrites whatever you changed. `public/feed.xml` and
+  `public/img/` are the exception: they aren't templated, so they live only in `public/` and are
+  edited/committed directly there.
+- `src/pages/index.html` — the single-page homepage. Sections in order: hero → "What I'm Currently Testing" strip → Recent Observations → faith/creed band → What I'm building → pull quote → About + Journal → "See what survives" (email signup) → footer.
+- `src/pages/observation-N.html` — one detail page per observation. `observation-01.html` is the template/reference.
+- `public/feed.xml` — RSS 2.0 feed. **This is the email trigger** (see Publishing).
+- `public/img/terrence.jpg` — headshot. Currently used in the About section only (hero is text-first, no photo — intentional).
 - `README.md` — deploy + workflow notes.
+
+## Build step (partials)
+Every page's `<nav>` and `<footer>` used to be duplicated in full across 19 files — any nav change
+meant 19 edits. Fixed with a minimal, dependency-free include system:
+
+- In `src/pages/*.html`, the nav and footer are replaced by include markers:
+  ```
+  <!-- include: nav logo_href="index.html" home="index.html" -->
+  <!-- include: footer -->
+  ```
+  `index.html` itself uses `logo_href="#" home=""` since its nav links are same-page anchors
+  (`#observations`), not cross-page ones (`index.html#observations`) — every other page needs the
+  `index.html` prefix.
+- `build.py` reads `src/partials/*.html`, substitutes any `{{key}}` tokens with the `key="value"`
+  pairs on the include marker, and writes the result to `public/<same filename>.html`.
+- **Workflow: edit files under `src/`, then run `python3 build.py`, then commit *both* `src/` and
+  the regenerated `public/` together, then push.** Cloudflare Pages still just serves `public/` as
+  static files — the build runs locally/here, not on Cloudflare, so no dashboard settings changed.
+- To add a third shared partial later, drop a new file in `src/partials/`, reference it with
+  `<!-- include: name -->` in the page templates, rebuild.
 
 ## Design system (all in the `:root` block of each HTML file)
 Fonts: **Playfair Display** (display/headings), **Inter** (body), **Dancing Script** (script accents, logo, signature).
@@ -74,6 +104,8 @@ Light theme exists via `[data-theme="light"]` and a toggle button. Keep both the
 
 ## Email + deploy
 - Email: `feed.xml` → **Kit** (Automate → RSS → add the feed). New posts become broadcasts.
-- Deploy: push to this repo → Cloudflare Pages auto-builds (preset: None, no build command).
-- Local preview: `python3 -m http.server 8000` then open `http://localhost:8000` (needed so
-  root-relative paths like `/feed.xml` and the OG image URLs resolve correctly).
+- Deploy: run `python3 build.py` locally, commit `src/` + regenerated `public/`, push → Cloudflare
+  Pages serves `public/` as-is (preset: None, output directory: `public`, no Cloudflare-side build
+  command — the build already happened before the push).
+- Local preview: `cd public && python3 -m http.server 8000` then open `http://localhost:8000`
+  (needed so root-relative paths like `/feed.xml` and the OG image URLs resolve correctly).

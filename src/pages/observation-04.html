@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith is not certainty about the outcome — Terrence Miquel</title>
+<link rel="alternate" type="application/rss+xml" title="Terrence Miquel — Observations" href="/feed.xml">
+<meta name="description" content="Faith isn't a transaction that guarantees the outcome you asked for. It's relational trust that holds after control runs out.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Terrence Miquel">
+<meta property="og:url" content="https://terrencemiquel.com/observation-04.html">
+<meta property="og:title" content="Faith is not certainty about the outcome. It is peace without control.">
+<meta property="og:description" content="Faith isn't a transaction that guarantees the outcome you asked for. It's relational trust that holds after control runs out.">
+<meta property="og:image" content="https://terrencemiquel.com/img/terrence.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Faith is not certainty about the outcome. It is peace without control.">
+<meta name="twitter:description" content="Faith isn't a transaction that guarantees the outcome you asked for. It's relational trust that holds after control runs out.">
+<meta name="twitter:image" content="https://terrencemiquel.com/img/terrence.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A14;
+  --bg-lift: #12131F;
+  --bg-card: #101019;
+  --line: #232436;
+  --ink: #F1F3F9;
+  --ink-soft: #B9BDCE;
+  --ink-faint: #8A8EA3;
+  --cream: #9FB2F0;
+  --cream-deep: #7C93EC;
+  --brand: #3957FF;
+}
+[data-theme="light"] {
+  --bg: #F4F5FA;
+  --bg-lift: #E9ECF6;
+  --bg-card: #FBFCFF;
+  --line: #D8DCEA;
+  --ink: #14151F;
+  --ink-soft: #40445A;
+  --ink-faint: #666B80;
+  --cream: #3D53D6;
+  --cream-deep: #2E42BE;
+  --brand: #3957FF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: 'Inter', sans-serif; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background .4s ease, color .4s ease;
+  overflow-x: hidden;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+.serif { font-family: 'Playfair Display', serif; }
+.script { font-family: 'Dancing Script', cursive; }
+
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+}
+.nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { font-family: 'Dancing Script', cursive; font-size: 1.9rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.back { color: var(--ink-soft); text-decoration: none; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
+.back:hover { color: var(--ink); }
+.toggle { background: var(--bg-lift); border: 1px solid var(--line); color: var(--cream); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; font-size: 1rem; display: grid; place-items: center; transition: all .2s; }
+.toggle:hover { border-color: var(--cream); }
+.toggle svg { display: block; }
+.toggle .icon-moon { display: none; }
+[data-theme="light"] .toggle .icon-sun { display: none; }
+[data-theme="light"] .toggle .icon-moon { display: block; }
+.nav-links { display: flex; gap: 34px; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none; font-size: .78rem;
+  letter-spacing: .16em; font-weight: 500; text-transform: uppercase;
+  padding: 6px 0; position: relative; transition: color .2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.nav-toggle { display: none; background: var(--bg-lift); border: 1px solid var(--line); color: var(--ink); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; place-items: center; }
+.nav-toggle:hover { border-color: var(--cream); }
+.subnav { border-bottom: 1px solid var(--line); }
+.subnav .wrap { max-width: 1120px; margin: 0 auto; padding: 14px 28px; }
+@media (max-width: 900px) {
+  .nav-toggle { display: grid; }
+  .nav-links {
+    display: none;
+    position: absolute; top: 72px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+    padding: 4px 28px 18px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: .82rem; }
+  .nav-links a:last-child { border-bottom: none; }
+}
+
+/* ---- ARTICLE HEAD ---- */
+.head { padding: 70px 0 46px; }
+.meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 30px; }
+.meta .num { font-family: 'Playfair Display', serif; font-size: .9rem; color: var(--cream); letter-spacing: .1em; }
+.meta .divider { width: 30px; height: 1px; background: var(--line); }
+.meta .date, .meta .cat { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; }
+.meta .cat { color: var(--cream-deep); }
+.statement { font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.12; font-weight: 600; letter-spacing: -0.01em; }
+.statement .hl { color: var(--cream); font-style: italic; }
+.byline { margin-top: 32px; display: flex; align-items: center; gap: 12px; color: var(--ink-faint); font-size: .9rem; }
+.byline .av { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; display: block; border: 1px solid var(--line); flex-shrink: 0; }
+.byline .av img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+.byline b { color: var(--ink-soft); font-weight: 600; }
+.byline a { text-decoration: none; color: inherit; }
+
+/* ---- SPINE (handed / tested / kept) ---- */
+.spine { border-top: 1px solid var(--line); }
+.step { padding: 52px 0; border-bottom: 1px solid var(--line); }
+.step-label { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.step-num { font-family: 'Playfair Display', serif; font-size: 1.1rem; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--cream); color: var(--cream); display: grid; place-items: center; flex-shrink: 0; }
+.step-kicker { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.step h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 18px; letter-spacing: -0.01em; }
+.step p { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 18px; }
+.step p:last-child { margin-bottom: 0; }
+.step p b { color: var(--ink); font-weight: 600; }
+.step.kept { background: var(--bg-lift); }
+.step.kept .inner { max-width: 760px; margin: 0 auto; }
+
+/* ---- PRINCIPLE PULL ---- */
+.principle { padding: 60px 0; text-align: center; border-bottom: 1px solid var(--line); }
+.principle .eyebrow { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--cream-deep); font-weight: 600; margin-bottom: 20px; }
+.principle .q { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.3; font-style: italic; color: var(--ink); }
+.principle .q .mk { color: var(--cream); font-style: normal; }
+
+/* ---- SOFT PRODUCT TIE ---- */
+.tie { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.tie-card { background: linear-gradient(155deg,#17233a,#121620 65%,#14120d); border: 1px solid var(--line); border-radius: 12px; padding: 28px 30px; display: flex; align-items: center; gap: 22px; }
+.tie-icon { width: 46px; height: 46px; border-radius: 10px; background: color-mix(in srgb, var(--cream) 14%, transparent); display: grid; place-items: center; color: var(--cream); flex-shrink: 0; }
+.tie-card p { font-size: .98rem; color: var(--ink-soft); }
+.tie-card p b { color: var(--ink); font-weight: 600; }
+.tie-card a { color: var(--cream); text-decoration: none; font-weight: 600; white-space: nowrap; margin-left: auto; display: inline-flex; align-items: center; gap: 7px; }
+.tie-card a svg { transition: transform .2s; }
+.tie-card a:hover svg { transform: translateX(4px); }
+
+/* ---- FOOTER NAV ---- */
+.foot-nav { padding: 46px 0 80px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.foot-nav a { text-decoration: none; color: var(--ink-soft); transition: color .2s; }
+.foot-nav a:hover { color: var(--ink); }
+.foot-nav .lbl { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 5px; }
+.foot-nav .ttl { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+.foot-nav .next { text-align: right; }
+
+@media (max-width: 640px) {
+  .tie-card { flex-direction: column; align-items: flex-start; }
+  .tie-card a { margin-left: 0; }
+  .foot-nav { flex-direction: column; align-items: stretch; gap: 24px; }
+  .foot-nav .next { text-align: left; }
+  .logo { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
+:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; border-radius: 3px; }
+footer { background: var(--bg); padding: 34px 0; text-align: center; }
+footer .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+footer .footer-links { display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 20px; }
+footer .footer-links a { color: var(--ink-faint); font-size: .82rem; text-decoration: none; transition: color .15s; }
+footer .footer-links a:hover { color: var(--ink); }
+footer p { color: var(--ink-faint); font-size: .82rem; }
+footer .script { font-size: 1.3rem; color: var(--cream-deep); }
+footer .social { display: flex; justify-content: flex-end; gap: 20px; }
+footer .social a { color: var(--cream); display: inline-flex; transition: color .15s; }
+footer .social a:hover { color: var(--cream-deep); }
+@media (max-width: 500px) {
+  footer .footer-row { justify-content: center; }
+  footer .footer-links, footer .social { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- include: nav logo_href="index.html" home="index.html" -->
+<div class="subnav">
+  <div class="wrap">
+    <a href="index.html#observations" class="back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All observations
+    </a>
+  </div>
+</div>
+
+<article>
+  <!-- HEAD -->
+  <header class="head">
+    <div class="wrap">
+      <div class="meta">
+        <span class="num">Observation 04</span>
+        <span class="divider"></span>
+        <span class="cat">Faith</span>
+        <span class="date">June 3, 2025</span>
+      </div>
+      <h1 class="statement serif">Faith is not certainty about the outcome. <span class="hl">It is peace without control.</span></h1>
+      <div class="byline">
+        <a href="index.html#about" class="av"><img src="img/terrence.jpg" alt="Terrence Miquel"></a>
+        <span>By <a href="index.html#about"><b>Terrence Miquel</b></a> · a 3-minute read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SPINE -->
+  <div class="spine">
+
+    <section class="step">
+      <div class="wrap">
+        <div class="step-label">
+          <span class="step-num">1</span>
+          <span class="step-kicker">What I was handed</span>
+        </div>
+        <h2 class="serif">Believe strongly enough, and God will give you the outcome you asked for.</h2>
+        <p>The version I was handed was transactional: faith as a kind of currency. Believe hard enough, in the right way, and the specific outcome you're asking for gets released to you. Get the outcome you wanted, and it worked. Don't, and your faith must have been the weak link.</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="wrap">
+        <div class="step-label">
+          <span class="step-num">2</span>
+          <span class="step-kicker">The test</span>
+        </div>
+        <h2 class="serif">Life didn't fit neatly inside that formula.</h2>
+        <p>Unanswered prayers. Suffering that didn't resolve on schedule. Delay with no clear reason. And promises in the text that were never framed as a vending machine — belief in, outcome out.</p>
+        <p>None of it disproved God. It disproved the transaction I'd assumed was the mechanism.</p>
+      </div>
+    </section>
+
+    <section class="step kept">
+      <div class="inner wrap">
+        <div class="step-label">
+          <span class="step-num">✓</span>
+          <span class="step-kicker" style="color:var(--cream)">What survived</span>
+        </div>
+        <h2 class="serif">Faith is relational trust, not a transaction.</h2>
+        <p>It's the kind of trust that lets you move forward without pretending you control what happens next. Not certainty that the outcome will be what I asked for — peace that holds regardless of which outcome shows up.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PRINCIPLE -->
+  <section class="principle">
+    <div class="wrap">
+      <div class="eyebrow">The principle that held</div>
+      <p class="q serif"><span class="mk">"</span>Faith does not give me control of the outcome. It gives me peace after control runs out.<span class="mk">"</span></p>
+    </div>
+  </section>
+
+  <!-- SOFT TIE -->
+  <section class="tie">
+    <div class="wrap">
+      <div class="tie-card">
+        <span class="tie-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-4-4-5-4-9z"/></svg>
+        </span>
+        <p>This is the same test I run on <b>faith</b> in full — reality's vote, not a formula for the outcome.</p>
+        <a href="faith.html">Read more <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOT NAV -->
+  <nav class="foot-nav wrap" aria-label="Between observations">
+    <a href="observation-05.html">
+      <span class="lbl">← Previous entry</span>
+      <span class="ttl">Execution doesn't guarantee the outcome. Refusing to execute guarantees failure.</span>
+    </a>
+    <a href="observation-03.html" class="next">
+      <span class="lbl">Next observation →</span>
+      <span class="ttl">Life had already given me permission. I was waiting for a person to confirm it.</span>
+    </a>
+  </nav>
+
+</article>
+
+<!-- include: footer -->
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const yr = document.getElementById('footer-year'); if (yr) yr.textContent = new Date().getFullYear();
+  toggle.addEventListener('click', () => {
+    root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+  const navToggle = document.getElementById('navToggle');
+  const navLinksEl = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navLinksEl.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinksEl.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>

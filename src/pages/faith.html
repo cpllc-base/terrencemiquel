@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Terrence Miquel</title>
-<meta name="description" content="Get in touch with Terrence Miquel.">
+<title>Testing Faith — Terrence Miquel</title>
+<meta name="description" content="How I test faith against reality — a God who still speaks, held against the text, the fruit, and time. Not religion.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@ nav {
 .subnav .wrap { padding: 14px 28px; }
 
 /* ---------- HERO ---------- */
-.hero { padding: 96px 0 68px; background: var(--bg-lift); }
+.hero { padding: 96px 0 68px; }
 .hero-grid { display: block; }
 .hero-content { max-width: 660px; }
 .eyebrow {
@@ -217,9 +217,6 @@ nav {
 .about-photo .portrait-note .script { font-size: 1.2rem; }
 .about h2 { font-size: 2rem; font-weight: 700; margin-bottom: 6px; }
 .about .rule { width: 46px; height: 3px; background: var(--cream); margin-bottom: 24px; }
-.about .rule-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-.about .rule-row .rule { margin-bottom: 0; }
-.about .rule-tag { color: var(--cream); font-style: italic; font-size: .95rem; }
 .about p { color: var(--ink-soft); margin-bottom: 16px; font-size: 1.03rem; }
 .about p b { color: var(--ink); font-weight: 600; }
 .about .more { color: var(--cream); text-decoration: none; font-weight: 600; font-size: .95rem; border-bottom: 1px solid color-mix(in srgb, var(--cream) 40%, transparent); }
@@ -252,7 +249,6 @@ nav {
   transition: background .2s;
 }
 .capture-form button:hover { background: #000; }
-.capture-success { color: #ffffff; font-weight: 600; align-self: center; }
 
 footer { background: var(--bg); padding: 34px 0; text-align: center; }
 footer .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
@@ -311,107 +307,39 @@ footer .social a:hover { color: var(--cream-deep); }
 #observations, #testing, #building, #connect { scroll-margin-top: 88px; }
 </style>
 <style>
-  .ct { max-width: 640px; margin: 0 auto; padding: 56px 28px 0; text-align: center; }
-  .ct h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
-  .ct .lead { color: var(--ink-faint); font-size: 1.15rem; max-width: 46ch; margin: 0 auto; }
-
-  .ct-band { background: var(--brand); color: #ffffff; margin-top: 48px; }
-  .ct-band-inner { padding: 46px 28px 110px; }
-  .ct-form { display: flex; flex-direction: column; gap: 16px; max-width: 480px; margin: 0 auto; text-align: left; }
-  .ct-form label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: rgba(255,255,255,0.82); margin-bottom: 6px; display: block; }
-  .ct-form input, .ct-form textarea {
-    border: 1px solid rgba(255,255,255,0.5); background: #fff; border-radius: 6px; padding: 15px 18px;
-    font-size: .95rem; font-family: inherit; width: 100%; color: #14151f; box-sizing: border-box;
-  }
-  .ct-form input::placeholder, .ct-form textarea::placeholder { color: #8a8fb0; }
-  .ct-form textarea { min-height: 140px; resize: vertical; }
-  .ct-form button {
-    background: #0A0A14; color: #ffffff; border: none; border-radius: 6px;
-    padding: 15px 26px; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
-    transition: background .2s; align-self: flex-start;
-  }
-  .ct-form button:hover { background: #000; }
-  .ct-form button:disabled { opacity: .7; cursor: default; }
-  .ct-form .h-captcha { align-self: flex-start; }
-  .ct-msg { font-weight: 600; }
-  .ct-msg.success { color: #ffffff; }
-  .ct-msg.error { color: #ffd6d6; }
+  .article { max-width: 720px; margin: 0 auto; padding: 70px 28px 110px; }
+  .article .rail { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin: 20px 0 36px; }
+  .article .rail .step { font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); font-weight:600; }
+  .article .rail .arrow { color: var(--cream); }
+  .article .rail .kept { color: var(--cream); }
+  .article h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight:700; line-height:1.08; letter-spacing:-0.015em; margin-bottom: 6px; }
+  .article h1 em { font-style: italic; color: var(--cream); }
+  .article p { font-size: 1.16rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 22px; }
+  .article p b { color: var(--ink); font-weight:600; }
 </style>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="logo">Terrence Miquel</a>
-    <div class="nav-links">
-      <a href="index.html#observations">Observations</a>
-      <a href="index.html#testing">Current Tests</a>
-      <a href="index.html#building">Building</a>
-      <a href="journal.html">Journal</a>
-      <a href="index.html#about">About</a>
-    </div>
-    <div class="nav-right">
-      <button class="toggle" id="themeToggle" aria-label="Toggle light and dark">
-        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
+<!-- include: nav logo_href="index.html" home="index.html" -->
 <div class="subnav">
   <div class="wrap">
     <a href="index.html" class="sec-link">&larr; Back to Home</a>
   </div>
 </div>
 
-<main class="ct">
-  <h1>Contact</h1>
-  <p class="lead">Have something worth testing? Send it my way.</p>
+<main class="article">
+  <h1 class="serif">I test faith against reality. <em>Not religion.</em></h1>
+  <div class="rail">
+    <span class="step">What I hear</span><span class="arrow">&rarr;</span>
+    <span class="step">The test</span><span class="arrow">&rarr;</span>
+    <span class="step kept">What holds</span>
+  </div>
+  <p>It starts with relationship &mdash; a God who still speaks and leads, not a closed book I'm left to interpret alone. That gives me two things to weigh: what I read in the text, and what I sense him prompting. Neither one lands as a conclusion. Each lands as a <b>hypothesis</b> &mdash; a claim about what's true and what to do.</p>
+  <p>Then reality gets a vote &mdash; and <b>the text is my plumb line.</b> God won't contradict his own character, so I hold every prompting against what's written, watch the fruit over time, and check it with people wiser than me. If it doesn't hold, the leading wasn't him or I read it wrong. If it holds, I lock it in.</p>
+  <p>The hard part was never whether he speaks. It's <b>telling his voice from my own wanting</b> &mdash; the thing I already wanted, wearing a halo. So I hold the voice to the same test as everything else. What I genuinely can't run this way &mdash; his nature, what waits after &mdash; reason and trust carry me there. How he leads, and how the principles actually live? Reality decides.</p>
+  <p>Religion's mistake isn't using the text. It's stopping there &mdash; doctrine with no living author still speaking behind it. <b>That's the part I let go.</b> I want the author &mdash; and I test what I hear because I believe he's really speaking, and it matters to get it right.</p>
 </main>
 
-<section class="ct-band">
-  <div class="wrap ct-band-inner">
-    <form class="ct-form" id="contact-form">
-      <div>
-        <label for="ct-name">Name</label>
-        <input id="ct-name" name="name" type="text" placeholder="Your name" required>
-      </div>
-      <div>
-        <label for="ct-email">Email</label>
-        <input id="ct-email" name="email" type="email" placeholder="you@example.com" required>
-      </div>
-      <div>
-        <label for="ct-message">Message</label>
-        <textarea id="ct-message" name="message" placeholder="What's on your mind?" required></textarea>
-      </div>
-      <input type="hidden" name="subject" value="New message from terrencemiquel.com contact form">
-      <div class="h-captcha" data-captcha="true"></div>
-      <button type="submit">Send message</button>
-      <div class="ct-msg" hidden></div>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-row">
-      <div class="footer-links">
-        <a href="contact.html">Contact</a>
-        <a href="terms-of-use.html">Terms of Use</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </div>
-      <div class="social">
-        <a href="https://www.instagram.com/_terrencemiquel/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.youtube.com/@Terrence_Miquel" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://facebook.com/terrencemiquel/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="https://www.linkedin.com/in/terrencemlewis/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-      </div>
-    </div>
-    <p>&copy; <span id="footer-year">2026</span> terrencemiquel.com</p>
-  </div>
-</footer>
+<!-- include: footer -->
 
 <script>
   const toggle = document.getElementById('themeToggle');
@@ -430,60 +358,6 @@ footer .social a:hover { color: var(--cream-deep); }
     navLinksEl.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   }));
-
-  const form = document.getElementById('contact-form');
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const msg = form.querySelector('.ct-msg');
-
-  function showMessage(text, isError) {
-    msg.textContent = text;
-    msg.className = 'ct-msg ' + (isError ? 'error' : 'success');
-    msg.hidden = false;
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    msg.hidden = true;
-
-    const captchaResponse = form.querySelector('[name="h-captcha-response"]');
-    if (!captchaResponse || !captchaResponse.value) {
-      showMessage('Please complete the captcha before sending.', true);
-      return;
-    }
-
-    const formData = new FormData(form);
-    formData.append("access_key", "5492e479-de87-41a3-9084-13be32f94140");
-
-    const originalText = submitBtn.textContent;
-
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        Array.from(form.children).forEach(child => {
-          if (child !== msg) child.style.display = 'none';
-        });
-        showMessage("Thanks — your message has been sent.", false);
-      } else {
-        showMessage('Error: ' + data.message, true);
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
-    } catch (error) {
-      showMessage('Something went wrong. Please try again.', true);
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
-  });
 </script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
